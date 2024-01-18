@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create-table-creatures"
+      author: "pavlofon"
+      changes:
+        - createTable:
+            tableName: "creatures"
+            columns:
+              - column:
+                  name: "id"
+                  type: "BIGINT"
+                  autoIncrement: true
+                  constraints:
+                      primaryKey: true
+                      nullable: false
+              - column:
+                  name: "creature_size"
+                  type: "VARCHAR"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "creature_type"
+                  type: "VARCHAR"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "creature_danger_indicator"
+                  type: "BIGINT"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "creature_name"
+                  type: "VARCHAR"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "creature_description"
+                  type: "VARCHAR"
+                  constraints:
+                    nullable: false

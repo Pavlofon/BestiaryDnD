@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insert-data-creatures"
+      author: "pavlofon"
+      changes:
+        - insert:
+            tableName: "creatures"
+            columns:
+              - column:
+                  name: "id"
+                  value: "1"
+              - column:
+                  name: "creatureSize"
+                  value: "Крошечный"
+              - column:
+                  name: "creatureType"
+                  value: "Зверь"
+              - column:
+                  name: "creatureDangerIndicator"
+                  value: "1"
+              - column:
+                  name: "creatureName"
+                  value: "Мышь"
+              - column:
+                  name: "creatureDescription"
+                  value: "Мышь обыкновенная"
