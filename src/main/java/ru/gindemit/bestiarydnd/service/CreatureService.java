@@ -15,7 +15,6 @@ import java.util.List;
 public class CreatureService {
     private final CreatureRepository creatureRepository;
     private final RequestMapper mapper;
-    //private static Long count = 2L;
 
     public Creature getCreatureById(Long id) throws FileNotFoundException {
         return creatureRepository.findById(id).orElseThrow(()-> new FileNotFoundException("Creature no found"));
@@ -26,11 +25,7 @@ public class CreatureService {
     }
 
     public Creature createCreature(CreaturePostRequest request){
-        System.out.println(request);
         Creature creature = mapper.requestToCreature(request);
-        System.out.println(creature);
-        //creature.setId(count);
-        //count++;
         creature = creatureRepository.save(creature);
         return creature;
     }
@@ -39,6 +34,5 @@ public class CreatureService {
         creatureRepository.delete(getCreatureById(id));
         return "Creature with" + id + " deleted";
     }
-
 
 }
