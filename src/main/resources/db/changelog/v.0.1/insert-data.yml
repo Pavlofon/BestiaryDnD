@@ -7,20 +7,17 @@ databaseChangeLog:
             tableName: "creatures"
             columns:
               - column:
-                  name: "id"
-                  value: "1"
-              - column:
-                  name: "creatureSize"
+                  name: "creature_size"
                   value: "Крошечный"
               - column:
-                  name: "creatureType"
+                  name: "creature_type"
                   value: "Зверь"
               - column:
-                  name: "creatureDangerIndicator"
+                  name: "creature_danger_indicator"
                   value: "1"
               - column:
-                  name: "creatureName"
+                  name: "creature_name"
                   value: "Мышь"
               - column:
-                  name: "creatureDescription"
+                  name: "creature_description"
                   value: "Мышь обыкновенная"

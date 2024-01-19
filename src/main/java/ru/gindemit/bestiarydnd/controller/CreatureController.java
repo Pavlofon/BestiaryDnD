@@ -19,9 +19,18 @@ public class CreatureController {
         return ResponseEntity.ok(creatureService.getCreatureById(id));
     }
 
+    @GetMapping()
+    public ResponseEntity<?> getAllClaim(){
+        return ResponseEntity.ok(creatureService.getAllCreature());
+    }
+
     @PostMapping(produces = "application/json")
     public ResponseEntity<?> createCreature(@RequestBody CreaturePostRequest request) {
         return ResponseEntity.ok(creatureService.createCreature(request));
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteCreatureById(@PathVariable Long id) throws FileNotFoundException {
+        return ResponseEntity.ok(creatureService.deleteCreature(id));
+    }
 }
